@@ -31,6 +31,7 @@ const AuthState = props => {
         'Content-Type': 'application/json'
       }
     };
+
     try {
       const res = await axios.post('/api/users', formData, config);
       console.log('POST Axios: ', res);
@@ -46,6 +47,8 @@ const AuthState = props => {
     }
   };
 
+  const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
+
   // Returns
   return (
     <AuthContext.Provider
@@ -55,7 +58,8 @@ const AuthState = props => {
         loading: state.loading,
         user: state.user,
         error: state.error,
-        register
+        register,
+        clearErrors
       }}
     >
       {props.children}
