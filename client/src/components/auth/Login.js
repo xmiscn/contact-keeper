@@ -47,10 +47,9 @@ const Login = props => {
           <input
             type='email'
             name='email'
+            placeholder='Enter your Email'
             value={email}
             onChange={onChange}
-            required
-            autoComplete={'username'}
           />
         </div>
         <div className='form-group'>
@@ -58,10 +57,9 @@ const Login = props => {
           <input
             type='password'
             name='password'
+            placeholder='Enter your Password'
             value={password}
             onChange={onChange}
-            required
-            autoComplete={'current-password'}
           />
         </div>
 
